@@ -89,3 +89,19 @@ function resetLap() {
   lapsContainer.classList.remove("h-40");
   lapsContainer.classList.add("h-0");
 }
+
+
+// Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable certain keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c' || e.key === 'v' || e.key === 'p' || e.key === 'a' || e.key === 'x')) {
+                e.preventDefault();
+            }
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+        });
